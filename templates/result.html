@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #F1F1F1;
+  color: black;
+}
+h1 {text-align: center;}
+
+
+</style>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body align = 'justify'>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			<h2 align='center'>Prediction of the news article</h2>
+		</div>
+		
+		
+	</div>
+	</header>
+	
+	<br/>
+	<br/>
+	
+	<div class="results">
+
+	{% if prediction == 0 %}
+        	<body> 
+            <div class="bd-example" align="middle">
+ 
+            <img src="{{url_for('static', filename='REAL.png')}}"align="middle" />
+            <h1>Model has predicted article as "REAL NEWS"!</h1>
+            </div>
+            </body>    	    	
+    {% else %}
+             <body> 
+            <div class="bd-example" align="middle">
+ 
+            <img src="{{url_for('static', filename='FAKE.png')}}"align="middle" />
+            <h1>Model has predicted article as "FAKE NEWS"!</h1>
+            </div>
+            </body>
+    {% endif %}
+		
+	
+	
+
+	</div>
+	
+	<br/>
+	<br/>
+		<br/>
+	<br/>
+		<br/>
+	<br/>
+	
+	<footer>
+  <p>Project by:<a href="https://abhishekmamdapure.github.io/">Abhishek Mamdapure</a></p>
+</footer>
+
+</body>
+</html>

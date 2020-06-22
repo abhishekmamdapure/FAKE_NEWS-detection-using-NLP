@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+footer {
+  text-align: right;
+  padding: 5px;
+  background-color: #F1F1F1;
+  color: black;
+}
+
+</style>
+	<title> Home </title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			 
+		</div>
+		<h2 align='center'>NLP based Fake News Detector</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container" align='center'>
+	
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		                
+         <p>Enter the title of the news article</p>
+		<textarea name="title" rows="2" cols="100"></textarea>
+          
+		<p>Enter Your Text Below</p>
+		<textarea name="text" rows="7" cols="100"></textarea>
+		
+		<br/>
+		<br/>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Get Prediction</button>
+        <!-- <input type="submit" class="btn-info" value="predict"> -->
+    	</form>
+    	
+    	
+	
+		
+	</div>
+	<br/>
+	<br/>
+		<br/>
+	<br/>
+		<br/>
+	<br/>
+	
+		<footer>
+          <p>Project by:<a href="https://abhishekmamdapure.github.io/">Abhishek Mamdapure</a></p>
+        </footer>
+
+
+	
+	
+
+</body>
+</html>
